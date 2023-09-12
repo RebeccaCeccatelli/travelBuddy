@@ -144,5 +144,6 @@ form input {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
+    background-color: oldlace;
     text-align: center; /* Allinea il testo negli input al centro */
 }
