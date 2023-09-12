@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Pages Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBuddy</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
+
 <body>
-<header>
-  <h1>Welcome to TravelBuddy</h1>
-</header>
-<main>
-  <p>This is the homepage of my website.</p>
-</main>
-<footer>
-  <p>&copy; 2023 Rebecca Ceccatelli </p>
-</footer>
+<div class="fixed-buttons">
+    <button id="scrollToAbout">About</button>
+    <button id="scrollToServices">Services</button>
+    <button id="register-button"><a href="client_choice_registration.html">Register</a></button>
+    <button id="login-button"><a href="login.html">Login</a></button>
+
+</div>
+<script src="../js/sticky_navbar_buttons.js"></script>
+
+<section class="welcome">
+    <header>
+        <h1>Welcome to TravelBuddy!</h1>
+    </header>
+    <main>
+        <h2>Travel and explore the world carefree. </h2>
+        <p>Whether you're looking for a toilette,
+            wanting to leave your bags somewhere safe, <br>
+            or trying to book the entrance for a turistic attraction, <br>
+            your personal travel assistant has got you covered.</p>
+    </main>
+</section>
+
+<section class="about" id="about">
+    <header>
+        <h1>About</h1>
+    </header>
+    <main>
+        <p>Learn more about our company and mission.</p>
+    </main>
+</section>
+
+<section class="services dynamic-height" id="services">
+    <header>
+        <h1>Services</h1>
+    </header>
+    <main>
+        <p>We are constantly expanding to help you cover every little detail of your trip. <br>
+        Check out our services, leave all your worries on the doorstep and just have fun!</p>
+
+        <div class="service-container">
+            <button class="service-button" data-description="Toilettes">Toilettes</button>
+            <div class="description" data-service="Toilettes">
+                <p>Description for Toilettes goes here.<p></p></div>
+        </div>
+
+        <div class="service-container">
+            <button class="service-button" data-description="Hotspots">Hotspots</button>
+            <div class="description" data-service="Hotspots">
+                <p>Description for Hotspots goes here.<p></p></div>
+        </div>
+        <div class="service-container">
+            <button class="service-button" data-description="Bags">Bags</button>
+            <div class="description" data-service="Bags">
+                <p>Description for bags goes here.<p></p></div>
+        </div>
+        <script src="../js/services_buttons.js"></script>
+
+    </main>
+</section>
+
 </body>
 </html>

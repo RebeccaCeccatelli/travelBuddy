@@ -1,0 +1,148 @@
+
+body {
+    background-image: url('../images/main_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+.fixed-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(204, 119, 34, 0);
+    padding: 10px;
+    width: 97%;
+    text-align: right;
+    z-index: 999;
+}
+
+.fixed-buttons button {
+    background-color: rgba(204, 119, 34, 0.2);
+    color: #111111;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+}
+
+.fixed-buttons button:hover {
+    background-color: rgba(204, 119, 34, 0.4);
+}
+
+#register-button a, #login-button a {
+    text-decoration: none;
+    color: #111111;
+}
+
+.description {
+    display: none;
+}
+
+.service-description {
+    display: none;
+    font-size: 24px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.service-button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.service-button {
+    background-color: rgba(204, 119, 34, 0.2);
+    color: #111111;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.service-button:hover {
+    background-color: rgba(204, 119, 34, 0.4);
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(204, 119, 34, 0.3);
+    color: #111111;
+}
+
+.services.dynamic-height {
+    background-color: rgba(204, 119, 34, 0.3);
+    height: auto;
+}
+
+.fullscreen section {
+    background-color: rgba(204, 119, 34, 0.3);
+    height: 100vh;
+}
+
+section h1 {
+    opacity: 1;
+    font-size: 6em;
+    margin-bottom: 0.1em;
+}
+
+section h2 {
+    opacity: 1;
+    font-size: 3.5em;
+    margin-bottom: 0.5em;;
+}
+section p{
+    opacity: 1;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.title-text {
+    opacity: 1;
+    font-size: 6em;
+    margin-bottom: 0.1em;
+    text-align: center;
+}
+
+/* Stili per il contenitore del modulo (il form) */
+form {
+    text-align: center;
+}
+
+/* Stili per i label */
+form label {
+    display: block;
+    margin: 0 auto; /* Imposta il margin a "auto" per centrare le etichette */
+    margin-bottom: 5px;
+    font-size: 22px;
+    text-align: center; /* Allinea il testo delle etichette al centro */
+}
+
+/* Stili per gli input */
+form input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center; /* Allinea il testo negli input al centro */
+}
