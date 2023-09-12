@@ -5,14 +5,22 @@ const confirmPassword = document.querySelector('#confirm-password');
 
 form.addEventListener('submit', function (e) {
     if (!isValidEmail(email.value)) {
-        alert('Inserisci un indirizzo email valido.');
+        alert('Please insert a valid email address.');
         e.preventDefault();
     } else if (password.value !== confirmPassword.value) {
-        alert('Le password non coincidono.');
-        // Svuota i campi delle password
+        alert('Passwords do not match.');
         password.value = '';
         confirmPassword.value = '';
         e.preventDefault();
+    }
+    else {
+        alert("Registration successful!");
+        if (email.value === "rebeccaceccatelli@gmail.com") {
+            window.location.href = "../../html/user_section/user_dashboard.html";
+        }
+        else {
+            window.location.href = "../../html/business_section/business_dashboard.html";
+        }
     }
 });
 

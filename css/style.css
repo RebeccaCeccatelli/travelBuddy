@@ -1,6 +1,5 @@
-
 body {
-    background-image: url('../images/main_background.jpg');
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,11 +8,15 @@ body {
     font-family: 'Lucida Handwriting', cursive;
 }
 
+a {
+    text-decoration: none;
+}
+
 .fixed-buttons {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(204, 119, 34, 0);
+    background-color: rgba(143, 76, 8, 0);
     padding: 10px;
     width: 97%;
     text-align: right;
@@ -21,8 +24,8 @@ body {
 }
 
 .fixed-buttons button {
-    background-color: rgba(204, 119, 34, 0.2);
-    color: #111111;
+    background-color: rgba(143, 76, 8, 0.2);
+    color: oldlace;
     padding: 10px 20px;
     border: none;
     margin-right: 10px;
@@ -33,12 +36,12 @@ body {
 }
 
 .fixed-buttons button:hover {
-    background-color: rgba(204, 119, 34, 0.4);
+    background-color: rgba(143, 76, 8, 0.4);
 }
 
 #register-button a, #login-button a {
     text-decoration: none;
-    color: #111111;
+    color: oldlace;
 }
 
 .description {
@@ -54,14 +57,8 @@ body {
 
 .service-button {
     display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.service-button {
-    background-color: rgba(204, 119, 34, 0.2);
-    color: #111111;
+    background-color: rgba(143, 76, 8, 0.2);
+    color: oldlace;
     padding: 15px 30px;
     border: none;
     cursor: pointer;
@@ -76,7 +73,7 @@ body {
 }
 
 .service-button:hover {
-    background-color: rgba(204, 119, 34, 0.4);
+    background-color: rgba(143, 76, 8, 0.4);
 }
 
 section {
@@ -86,21 +83,22 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(204, 119, 34, 0.3);
-    color: #111111;
+    background-color: rgba(143, 76, 8, 0.3);
+    color: oldlace;
 }
 
 .services.dynamic-height {
-    background-color: rgba(204, 119, 34, 0.3);
+    background-color: rgba(143, 76, 8, 0.3);
     height: auto;
 }
 
 .fullscreen section {
-    background-color: rgba(204, 119, 34, 0.3);
+    background-color: rgba(143, 76, 8, 0.3);
     height: 100vh;
 }
 
 section h1 {
+    margin-top: 20px;
     opacity: 1;
     font-size: 6em;
     margin-bottom: 0.1em;
@@ -124,26 +122,152 @@ section p{
     text-align: center;
 }
 
-/* Stili per il contenitore del modulo (il form) */
 form {
     text-align: center;
 }
 
-/* Stili per i label */
 form label {
     display: block;
-    margin: 0 auto; /* Imposta il margin a "auto" per centrare le etichette */
+    margin: 0 auto;
     margin-bottom: 5px;
     font-size: 22px;
-    text-align: center; /* Allinea il testo delle etichette al centro */
+    text-align: center;
 }
 
-/* Stili per gli input */
 form input {
     display: block;
     width: 100%;
     padding: 5px;
+    border: none;
     margin-bottom: 10px;
-    background-color: oldlace;
-    text-align: center; /* Allinea il testo negli input al centro */
+    background-color: rgba(143, 76, 8, 0.5);
+    color: oldlace;
+    text-align: center;
+}
+
+.modal button {
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgba(143, 76, 8, 0);
+    color: oldlace;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+}
+
+#userMenuButton {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-color: rgba(143, 76, 8, 0.2);
+    color: oldlace;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.ellipsis {
+    font-size: 22px;
+    margin-left: 5px;
+    margin-top: -10px;
+}
+
+#userMenu {
+    border: none;
+    display: none;
+    position: absolute;
+    top: 58px;
+    right: 40px;
+    font-size: 18px;
+
+    background-color: rgba(143, 76, 8, 0.2);
+    padding: 10px;
+    color: oldlace;
+}
+
+.modal button:hover,
+.modal a:hover,
+#userMenuButton:hover,
+#userMenu a:hover {
+    background-color: rgba(143, 76, 8, 0.4);
+}
+
+.expandable {
+    border:none;
+    display: none;
+    padding: 10px;
+    background-color: rgba(143, 76, 8, 0);
+    margin-top: 10px;
+}
+
+#findAndReserveButton, #subscription, #Reviews {
+    background-color: rgba(143, 76, 8, 0.2);
+    color: oldlace;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+    width: auto;
+    margin: 40px auto;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#findAndReserveButton:hover, #subscription:hover, #Reviews:hover {
+    background-color: rgba(143, 76, 8, 0.4);
+}
+
+.expandable button {
+    background-color: rgba(143, 76, 8, 0.2);
+    color: oldlace;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.expandable button:hover {
+    background-color: rgba(143, 76, 8, 0.4);
+}
+
+
+.button-with-image {
+    display: inline-block;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.button-with-image img {
+    max-height: 125px;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.button-with-image button {
+    background-color: rgba(143, 76, 8, 0.2);
+    color: oldlace;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<section class="services dynamic-height" id="services">
+    <div class="fixed-buttons">
+    <button id="userMenuButton">
+        Rebecca Ceccatelli <span class="ellipsis">...</span>
+    </button>
+    <div id="userMenu" class="modal">
+        <a href="account_details.html"><button id="accountDetailsButton">Account Details</button></a>
+        <a href="../public_section/homepage.html"><button id="logoutButton">Log Out</button></a>
+    </div>
+    </div>
+    <h1>Hi, Rebecca!</h1>
+    <p>Your TravelBuddy always takes care of you, and is full of resources. <br>
+        What do you want to do today?</p>
+
+    <div class="find-reserve">
+        <button id="findAndReserveButton">Find and Reserve</button>
+        <div class="expandable" id="expandable">
+            <p>What are you looking for?</p>
+            <div class="button-with-image">
+                <a href="../maps/toilets.html">
+                    <img src="../../images/services/toilettes.jpg" alt="Toilets Image">
+                    <button>Toilets</button>
+                </a>
+            </div>
+            <div class="button-with-image">
+                <a href="link_to_wifi_hotspots_page.html">
+                    <img src="../../images/services/wifi_hotspot.jpeg" alt="WiFi hotspots Image">
+                    <button>WiFi hotspots</button>
+                </a>
+            </div>
+            <div class="button-with-image">
+                <a href="link_to_luggage_deposit_page.html">
+                    <img src="../../images/services/luggage_storage.jpeg" alt="Luggage deposit Image">
+                    <button>Luggage deposits</button>
+                </a>
+            </div>
+            <div class="button-with-image">
+                <a href="link_to_parking_lots_page.html">
+                    <img src="../../images/services/parking_lots.webp" alt="Parking lots Image">
+                    <button>Parking lots</button>
+                </a>
+            </div>
+            <div class="button-with-image">
+                <a href="link_to_tourist_attractions_page.html">
+                    <img src="../../images/services/tourist_attractions.jpeg" alt="Tourist attractions Image">
+                    <button>Tourist attractions</button>
+                </a>
+            </div>
+            <div class="button-with-image">
+                <a href="link_to_dining_options_page.html">
+                    <img src="../../images/services/dining_options.jpeg" alt="Dining options Image">
+                    <button>Dining options</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <button id="subscription">Check or upgrade subscription</button>
+    <button id="Reviews">Reviews</button>
+
+
+</section>
+<script src="../../js/user_section/show_dropdown_menu.js" ></script>
+<script src="../../js/user_section/expand_find_button.js" ></script>
+
+</body>
+</html>
