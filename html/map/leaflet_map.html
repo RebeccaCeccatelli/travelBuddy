@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+<div id="map" style="width: 100%; height: 100vh;"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    function addMarkersWithPopups(map, popupData) {
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        popupData.forEach(function(data) {
+            var marker = L.marker(data.coordinates).addTo(map);
+            marker.bindPopup(data.message);
+        });
+    }
+
+    var leaflet_map = L.map('map').setView([43.7696, 11.2558], 13);
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var type = urlParams.get('type');
+
+    var jsonFile;
+    if (type === 'toilets') {
+        jsonFile = 'json/toilets.json';
+    }
+    else if (type === 'wifi_hotspots') {
+        jsonFile = 'json/wifi_hotspots.json';
+    }
+    else if (type === 'luggage_deposit') {
+        jsonFile = 'json/luggage_deposit.json';
+    }
+    else if (type === 'parking_lots') {
+        jsonFile = 'json/parking_lots.json';
+    }
+    else if (type === 'tourist_attractions') {
+        jsonFile = 'json/tourist_attractions.json';
+    }
+    else if (type === 'dining_options') {
+        jsonFile = 'json/dining_options.json';
+    }
+
+    fetch(jsonFile)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(popupData) {
+            addMarkersWithPopups(leaflet_map, popupData);
+        })
+        .catch(function(error) {
+            console.error('Error while loading JSON file:', error);
+        });
+</script>
+</body>
+</html>
+
