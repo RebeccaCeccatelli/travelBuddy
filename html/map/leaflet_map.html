@@ -3,46 +3,81 @@
 <head>
     <title>Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        /* Stile per il testo del messaggio nel popup */
+        .popup-message {
+            margin-bottom: 10px; /* Aggiunge spazio tra il testo del messaggio e il pulsante */
+        }
+
+        /* Stile per il bottone Reserve nel popup */
+        .popup-button button {
+            background-color: dodgerblue; /* Sfondo blu */
+            color: white; /* Testo bianco */
+            border: none; /* Nessun bordo */
+            padding: 5px 10px; /* Aggiunge spazio interno al pulsante */
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
 <div id="map" style="width: 100%; height: 100vh;"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    function addMarkersWithPopups(map, popupData) {
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+    var leaflet_map = L.map('map').setView([43.7696, 11.2558], 13);
 
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(leaflet_map);
+
+    var customIcon = L.icon({
+        iconUrl: '../../images/icons/red_icon.png',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+    });
+
+    var marker = L.marker([43.798296474714505, 11.252671445131638], { icon: customIcon })
+        .bindPopup('You are here!')
+        .addTo(leaflet_map);
+
+    function addMarkersWithPopups(map, popupData) {
         popupData.forEach(function(data) {
             var marker = L.marker(data.coordinates).addTo(map);
-            marker.bindPopup(data.message);
+
+            // Crea il contenuto del popup con il testo del messaggio e il bottone "Reserve"
+            var popupContent = '<div class="popup-message">' + data.message + '</div>' +
+                '<div class="popup-button"><button onclick="reserve()">Reserve</button></div>';
+
+            marker.bindPopup(popupContent);
         });
     }
 
-    var leaflet_map = L.map('map').setView([43.7696, 11.2558], 13);
+    function reserve() {
+        var modalWindow = window.open('../user_section/reservation.html');
+    }
 
     var urlParams = new URLSearchParams(window.location.search);
     var type = urlParams.get('type');
 
     var jsonFile;
     if (type === 'toilets') {
-        jsonFile = 'json/toilets.json';
+        jsonFile = '../../json_files/toilets.json';
     }
     else if (type === 'wifi_hotspots') {
-        jsonFile = 'json/wifi_hotspots.json';
+        jsonFile = '../../json_files/wifi_hotspots.json';
     }
     else if (type === 'luggage_deposit') {
-        jsonFile = 'json/luggage_deposit.json';
+        jsonFile = '../../json_files/luggage_deposit.json';
     }
     else if (type === 'parking_lots') {
-        jsonFile = 'json/parking_lots.json';
+        jsonFile = '../../json_files/parking_lots.json';
     }
     else if (type === 'tourist_attractions') {
-        jsonFile = 'json/tourist_attractions.json';
+        jsonFile = '../../json_files/tourist_attractions.json';
     }
     else if (type === 'dining_options') {
-        jsonFile = 'json/dining_options.json';
+        jsonFile = '../../json_files/dining_options.json';
     }
 
     fetch(jsonFile)
@@ -58,4 +93,3 @@
 </script>
 </body>
 </html>
-

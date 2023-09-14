@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="fixed-buttons">
+<div class="sticky_navbar">
     <button id="scrollToAbout">About</button>
     <button id="scrollToServices">Services</button>
     <button id="register-button"><a href="client_choice_registration.html">Register</a></button>
@@ -83,6 +83,17 @@
 
     </main>
 </section>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var section = document.querySelector('.services.dinamic-height');
+        var sectionHeight = section.scrollHeight;
 
+        if (sectionHeight <= window.innerHeight) {
+            section.style.height = '100vh';
+            section.style.overflowY = 'hidden';
+        }
+    });
+
+</script>
 </body>
 </html>

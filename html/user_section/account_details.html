@@ -5,27 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account details</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <style>
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .form-row label {
+            flex: 1;
+        }
+
+        .form-row input {
+            flex: 3;
+            margin-left: 20px;
+        }
+
+        .save-button {
+            background-color: rgba(143, 76, 8, 0.2);
+            color: oldlace;
+            border: none;
+            width: 70px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 22px;
+            font-family: 'Lucida Handwriting', cursive;
+            font-weight: bold;
+            flex: 1;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .save-button:hover {
+            background-color: rgba(143, 76, 8, 0.4);
+        }
+
+        .section_details {
+            background-color: rgba(143, 76, 8, 0.3);
+            max-height: 100vh;
+            height: auto;
+            overflow-y: auto;
+        }
+    </style>
 </head>
 <body>
-<section class="services dynamic-height" id="services">
+<section class="section_details" id="details">
     <h1>Update your account details here:</h1>
-    <form>
-        <label for="first-name">Name:</label>
-        <input type="text" id="first-name" name="first-name" required>
-        <button type="submit" class="service-button">Save</button>
-    </form>
-    <form>
-        <label for="second-name">Surname:</label>
-        <input type="text" id="second-name" name="second-name" required>
-        <button type="submit" class="service-button">Save</button>
-    </form>
-    <form>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
-        <button type="submit" class="service-button">Save</button>
-    </form>
 
-
+    <form class="save-form" id="name-form">
+        <div class="form-row">
+            <label for="first-name">Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+            <button type="button" class="save-button">Save</button>
+        </div>
+    </form>
+    <form class="save-form" id="surname-form">
+        <div class="form-row">
+            <label for="second-name">Surname:</label>
+            <input type="text" id="second-name" name="second-name" required>
+            <button type="button" class="save-button">Save</button>
+        </div>
+    </form>
+    <form class="save-form" id="email-form">
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <button type="button" class="save-button">Save</button>
+        </div>
+    </form>
+    <form class="save-form" id="password-form">
+        <div class="form-row">
+            <label for="password">New password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="reinsert_password">Reinsert password:</label>
+            <input type="password" id="reinsert_password" name="reinsert_password" required>
+            <button type="button" class="save-button">Save</button>
+        </div>
+    </form>
 </section>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var section = document.querySelector('.section_details');
+        var sectionHeight = section.scrollHeight;
+
+        if (sectionHeight <= window.innerHeight) {
+            section.style.height = '100vh';
+            section.style.overflowY = 'hidden';
+        }
+    });
+
+</script>
+<script>
+    var saveButtons = document.querySelectorAll('.save-button');
+    saveButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var form = button.closest('.save-form');
+            var inputs = form.querySelectorAll('input[type="text"], input[type="password"]');
+            var valid = true;
+
+            inputs.forEach(function(input) {
+                if (!input.value.trim()) {
+                    valid = false;
+                    return;
+                }
+            });
+
+            if (form.id === 'password-form') {
+                var password = document.getElementById('password').value;
+                var reinsertPassword = document.getElementById('reinsert_password').value;
+
+                if (password !== reinsertPassword) {
+                    alert('Passwords do not match. Try again.');
+                    inputs.forEach(function(input) {
+                        input.value = "";
+                    });
+                    valid = false;
+                }
+            }
+
+            if (valid) {
+                alert('Save successful!');
+
+                inputs.forEach(function(input) {
+                    input.value = "";
+                });
+            } else {
+                alert('Please complete the required fields.');
+            }
+        });
+    });
+</script>
 </body>
 </html>
