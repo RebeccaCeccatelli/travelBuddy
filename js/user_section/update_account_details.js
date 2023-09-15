@@ -12,7 +12,15 @@ function saveForm(formType) {
 
     if (valid) {
         alert('Save successful!');
+        clearFields(formType);
     } else {
         alert('Please complete the required fields or fix validation errors.');
+    }
+}
+
+function clearFields(formType) {
+    document.getElementById(formType).value = '';
+    if (formType === 'password') {
+        document.getElementById('password_confirmation').value = '';
     }
 }

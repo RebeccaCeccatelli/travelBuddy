@@ -12,67 +12,65 @@
 <body>
 <section class="section" id="user_dashboard">
     <div class="sticky_navbar">
-        <button id="dropdown_menu">Rebecca Ceccatelli <span class="ellipsis">...</span></button>
-        <div id="userMenu" class="modal">
-            <a href="account_details.html"><button id="accountDetailsButton">Account Details</button></a>
-            <a href="../public_area/homepage.html"><button id="logoutButton">Log Out</button></a>
+        <button id="dropdown_button" class="button">Rebecca Ceccatelli <span class="ellipsis">...</span></button>
+        <div id="dropdown_menu" class="modal">
+            <a href="account_details.html"><button id="accountDetailsButton" class="modal_button">Account Details</button></a>
+            <a href="tbd.html"><button id="paymentMethodsButton" class="modal_button">Payment Methods</button></a>
+            <a href="../public_area/homepage.html"><button id="logoutButton" class="modal_button">Log Out</button></a>
         </div>
     </div>
+
     <h1>Hi, Rebecca!</h1>
     <p>Your TravelBuddy always takes care of you, and is full of resources. <br>
         What do you want to do today?</p>
 
-    <div class="find-reserve">
-        <button id="findAndReserveButton">Find and Reserve</button>
+        <button id="findAndReserveButton" class="button">Find and Reserve</button>
         <div class="expandable" id="expandable">
             <p>What are you looking for?</p>
-            <div class="button-container">
-                <div class="button-with-image">
-                    <a href="../map/leaflet_map.html?type=toilets">
+                <div class="button_with_image">
+                    <a href="../maps/leaflet_map.html?type=toilets">
                         <img src="../../images/services/toilets.jpg" alt="Toilets Image">
-                        <button>Toilets</button>
+                        <button class="button">Toilets</button>
                     </a>
                 </div>
-                <div class="button-with-image">
-                    <a href="../map/leaflet_map.html?type=wifi_hotspots">
+                <div class="button_with_image">
+                    <a href="../maps/leaflet_map.html?type=wifi_hotspots">
                         <img src="../../images/services/wifi_hotspot.jpeg" alt="WiFi hotspots Image">
-                        <button>WiFi hotspots</button>
+                        <button class="button"> WiFi hotspots</button>
                     </a>
                 </div>
-                <div class="button-with-image">
-                    <a href="../map/leaflet_map.html?type=luggage_deposit">
+                <div class="button_with_image">
+                    <a href="../maps/leaflet_map.html?type=luggage_deposit">
                         <img src="../../images/services/luggage_storage.jpeg" alt="Luggage deposit Image">
-                        <button>Luggage deposit</button>
+                        <button class="button">Luggage deposit</button>
                     </a>
                 </div>
-                <div class="button-with-image">
-                    <a href="../map/leaflet_map.html?type=parking_lots">
+                <div class="button_with_image">
+                    <a href="../maps/leaflet_map.html?type=parking_lots">
                         <img src="../../images/services/parking_lots.webp" alt="Parking lots Image">
-                        <button>Parking lots</button>
+                        <button class="button">Parking lots</button>
                     </a>
                 </div>
-                <div class="button-with-image">
-                    <a href="../map/leaflet_map.html?type=tourist_attractions">
+                <div class="button_with_image">
+                    <a href="../maps/leaflet_map.html?type=tourist_attractions">
                         <img src="../../images/services/tourist_attractions.jpeg" alt="Tourist attractions Image">
-                        <button>Tourist attractions</button>
+                        <button class="button">Tourist attractions</button>
                     </a>
                 </div>
-                <div class="button-with-image">
-                    <a href="../map/leaflet_map.html?type=dining_options">
+                <div class="button_with_image">
+                    <a href="../maps/leaflet_map.html?type=dining_options">
                         <img src="../../images/services/dining_options.jpeg" alt="Dining options Image">
-                        <button>Dining options</button>
+                        <button class="button">Dining options</button>
                     </a>
                 </div>
-            </div>
         </div>
-    </div>
 
-    <button id="subscription">Check or upgrade subscription</button>
-    <button id="Reviews">Reviews</button>
+    <button id="subscription" class="button">Check or upgrade subscription</button>
+    <button id="Reviews" class="button">Reviews</button>
 
 </section>
+
 <script src="../../js/user_section/show_dropdown_menu.js" ></script>
 <script src="../../js/user_section/expand_find_button.js" ></script>
-
 </body>
 </html>

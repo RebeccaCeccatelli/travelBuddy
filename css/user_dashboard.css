@@ -1,28 +1,8 @@
-.modal button {
-    display: block;
-    margin: 5px;
-    padding: 10px;
-    background-color: rgba(143, 76, 8, 0);
-    color: oldlace;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-family: 'Lucida Handwriting', cursive;
-    font-weight: bold;
-}
-
-#dropdown_menu {
+.sticky_navbar .button {
     position: absolute;
-    top: 10px;
-    right: 30px;
-    background-color: rgba(143, 76, 8, 0.2);
-    color: oldlace;
+    top: 5px;
+    right: 5px;
     padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-family: 'Lucida Handwriting', cursive;
-    font-weight: bold;
     display: flex;
     align-items: center;
 }
@@ -33,24 +13,36 @@
     margin-top: -10px;
 }
 
-#userMenu {
-    border: none;
+.modal {
     display: none;
     position: absolute;
-    top: 58px;
-    right: 40px;
-    font-size: 18px;
-
+    top: 100px;
+    right: 8px;
     background-color: rgba(143, 76, 8, 0.2);
-    padding: 10px;
-    color: oldlace;
+    padding: 20px;
 }
 
-.modal button:hover,
-.modal a:hover,
-#dropdown_menu:hover,
-#userMenu a:hover {
-    background-color: rgba(143, 76, 8, 0.4);
+.modal_button {
+    display: block;
+    padding: 10px;
+    background-color: rgba(143, 76, 8, 0);
+    color: oldlace;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+}
+
+.modal_button:hover {
+    background-color: rgba(143, 76, 8, 0.2);
+
+}
+
+.section .button {
+    width: auto;
+    margin: 40px auto;
+    white-space: nowrap;
 }
 
 .expandable {
@@ -61,79 +53,24 @@
     margin-top: 10px;
 }
 
-#findAndReserveButton, #subscription, #Reviews {
-    background-color: rgba(143, 76, 8, 0.2);
-    color: oldlace;
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 22px;
-    font-family: 'Lucida Handwriting', cursive;
-    font-weight: bold;
-    width: auto;
-    margin: 40px auto;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-#findAndReserveButton:hover, #subscription:hover, #Reviews:hover {
-    background-color: rgba(143, 76, 8, 0.4);
-}
-
-.expandable button {
-    background-color: rgba(143, 76, 8, 0.2);
-    color: oldlace;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-family: 'Lucida Handwriting', cursive;
-    font-weight: bold;
-    margin: 5px;
-}
-
-.expandable button:hover {
-    background-color: rgba(143, 76, 8, 0.4);
-}
-
-.button-with-image {
+.button_with_image {
     display: inline-block;
+    align-items: center;
     text-align: center;
     margin-right: 40px;
 }
 
-.button-with-image img {
+.button_with_image img {
     max-height: 125px;
     max-width: 200px;
     display: block;
-    margin: 0 auto 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
-.button-with-image button {
-    background-color: rgba(143, 76, 8, 0.2);
-    color: oldlace;
+.button_with_image .button {
     padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 22px;
-    font-family: 'Lucida Handwriting', cursive;
-    font-weight: bold;
-    white-space: nowrap;
-    text-align: center;
+    margin-top: 10px;
 }
 
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-.button-container .button-with-image {
-    flex: 1;
-}
-
-.button-with-image {
-    text-align: center;
-}

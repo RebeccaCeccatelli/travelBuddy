@@ -1,0 +1,11 @@
+.popup_message {
+    margin-bottom: 10px;
+}
+
+.popup_button button {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
