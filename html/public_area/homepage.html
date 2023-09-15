@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBuddy</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/sticky_navbar.css">
+</head>
+
+<body>
+<div class="sticky_navbar">
+    <button id="scrollToAbout" class="button">About</button>
+    <button id="scrollToServices" class="button">Services</button>
+    <button id="register-button" class="button"><a href="client_type_choice.html">Register</a></button>
+    <button id="login-button" class="button"><a href="login.html">Login</a></button>
+</div>
+
+<div class="section" id="welcome">
+    <header>
+        <h1>Welcome to TravelBuddy!</h1>
+    </header>
+    <main>
+        <h2>Travel and explore the world carefree. </h2>
+        <p>Whether you're looking for a toilette,
+            wanting to leave your bags somewhere safe, <br>
+            or trying to book the entrance for a turistic attraction, <br>
+            your personal travel assistant has got you covered.</p>
+    </main>
+</div>
+
+<div class="section" id="about">
+    <header>
+        <h1>About</h1>
+    </header>
+    <main>
+        <p>Learn more about our company and mission.</p>
+    </main>
+</div>
+
+<section class="section" id="services">
+    <header>
+        <h1>Services</h1>
+    </header>
+    <main>
+        <p>We are constantly expanding to help you cover every little detail of your trip. <br>
+        Check out our services, leave all your worries on the doorstep and just have fun!</p>
+
+            <button class="button" data-description="Toilets">Toilets</button>
+            <div class="description" data-service="Toilets">
+                <p>Description for Toilets goes here.<p></p></div>
+
+            <button class="button" data-description="Hotspots">WiFi hotspots</button>
+            <div class="description" data-service="Hotspots">
+                <p>Description for Hotspots goes here.<p></p></div>
+
+            <button class="button" data-description="Luggage deposit">Luggage deposit</button>
+            <div class="description" data-service="Luggage deposit">
+                <p>Description for bags goes here.<p></p></div>
+
+            <button class="button" data-description="Parking lots">Parking lots</button>
+            <div class="description" data-service="Parking lots">
+                <p>Description for parking lots goes here.<p></p></div>
+
+            <button class="button" data-description="Tourist attractions">Tourist attractions</button>
+            <div class="description" data-service="Tourist attractions">
+                <p>Description for tourist attractions goes here.<p></p></div>
+
+            <button class="button" data-description="Dining options">Dining options</button>
+            <div class="description" data-service="Dining options">
+                <p>Description for dining options goes here.<p></p></div>
+    </main>
+</section>
+
+<script src="../../js/public_section/scroll_to_navbar_buttons.js"></script>
+<script src="../../js/public_section/show_service_description.js"></script>
+</body>
+</html>

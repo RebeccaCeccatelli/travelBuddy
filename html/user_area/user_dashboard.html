@@ -4,34 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-
-    <style>
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .button-container .button-with-image {
-            flex: 1;
-        }
-
-        .button-with-image {
-            text-align: center;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/sticky_navbar.css">
+    <link rel="stylesheet" type="text/css" href="../../css/user_dashboard.css">
 </head>
+
 <body>
-<section class="services dynamic-height" id="services">
+<section class="section" id="user_dashboard">
     <div class="sticky_navbar">
-        <button id="userMenuButton">
-            Rebecca Ceccatelli <span class="ellipsis">...</span>
-        </button>
+        <button id="dropdown_menu">Rebecca Ceccatelli <span class="ellipsis">...</span></button>
         <div id="userMenu" class="modal">
             <a href="account_details.html"><button id="accountDetailsButton">Account Details</button></a>
-            <a href="../public_section/homepage.html"><button id="logoutButton">Log Out</button></a>
+            <a href="../public_area/homepage.html"><button id="logoutButton">Log Out</button></a>
         </div>
     </div>
     <h1>Hi, Rebecca!</h1>

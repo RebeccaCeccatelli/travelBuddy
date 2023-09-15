@@ -1,4 +1,4 @@
-const serviceButtons = document.querySelectorAll(".service-button");
+const serviceButtons = document.querySelectorAll(".button");
 
 serviceButtons.forEach((button) => {
     button.addEventListener("click", () => {

@@ -24,9 +24,9 @@ loginForm.addEventListener("submit", function (event) {
             if (accessAllowed) {
                 alert("Login successful!");
                 if (userType === "user") {
-                    window.location.href = "../../html/user_section/user_dashboard.html";
+                    window.location.href = "../../html/user_area/user_dashboard.html";
                 } else if (userType === "business") {
-                    window.location.href = "../../html/business_section/business_dashboard.html";
+                    window.location.href = "../../html/business_area/business_dashboard.html";
                 } else {
                     alert("Unknown user type. Please try again.");
                 }

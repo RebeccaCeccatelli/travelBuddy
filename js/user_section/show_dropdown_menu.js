@@ -1,4 +1,4 @@
-const userMenuButton = document.getElementById("userMenuButton");
+const userMenuButton = document.getElementById("dropdown_menu");
 const userMenu = document.getElementById("userMenu");
 const accountDetailsButton = document.getElementById("accountDetailsButton");
 const logoutButton = document.getElementById("logoutButton");

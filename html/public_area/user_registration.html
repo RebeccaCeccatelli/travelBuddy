@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/forms.css">
+
+</head>
+<body>
+<section  class="section" id="user_registration">
+    <form>
+        <h1>User Registration</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="email">Insert your email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Choose your password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="password_confirmation">Confirm your Password:</label>
+        <input type="password" id="password_confirmation" name="password_confirmation" required>
+
+        <button type="submit" class="button">Register</button>
+    </form>
+</section>
+
+<script src="../../js/public_section/validate_registration.js"></script>
+</body>
+</html>
