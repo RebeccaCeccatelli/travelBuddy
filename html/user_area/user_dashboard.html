@@ -13,14 +13,7 @@
 
 <body>
 <section class="section" id="user_dashboard">
-    <div class="sticky_navbar">
-        <button id="dropdown_button" class="button">Rebecca Ceccatelli <span class="ellipsis">...</span></button>
-        <div id="dropdown_menu" class="modal">
-            <a href="account_details.html"><button id="accountDetailsButton" class="modal_button">Account Details</button></a>
-            <button id="paymentMethodsButton" class="modal_button">Payment Methods</button>
-            <a href="../public_area/homepage.html"><button id="logoutButton" class="modal_button">Log Out</button></a>
-        </div>
-    </div>
+    <div id="navbar-container"></div>
 
     <h1>Hi, Rebecca!</h1>
     <p>Your TravelBuddy always takes care of you, and is full of resources. <br>
@@ -68,11 +61,16 @@
         </div>
 
     <a href="offers_and_subscriptions.html"><button id="subscription" class="button">Our offers for you: <br>Check or upgrade subscription</button></a>
-    <button id="Reviews" class="button">Reviews</button>
+    <button class="button" data-description="reviews">Reviews</button>
+    <div class="description" data-service="reviews">
+        <a href="add_review.html"><button class="button" id="add_review_button">Add new review</button></a>
+        <a href="check_given_reviews.html"><button class="button" id="check_given_reviews">Check given reviews</button></a>
+    </div>
 
 </section>
-
-<script src="../../js/user_section/show_dropdown_menu.js" ></script>
-<script src="../../js/user_section/expand_button.js" ></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../../js/user_area/load_sticky_navbar.js"></script>
+<script src="../../js/user_area/expand_button.js" ></script>
+<script src="../../js/public_area/show_description.js"></script>
 </body>
 </html>

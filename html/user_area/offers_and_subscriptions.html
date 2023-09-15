@@ -23,14 +23,7 @@
 
 <body>
 <section class="section" id="subscriptions">
-    <div class="sticky_navbar">
-        <button id="dropdown_button" class="button">Rebecca Ceccatelli <span class="ellipsis">...</span></button>
-        <div id="dropdown_menu" class="modal">
-            <a href="account_details.html"><button id="accountDetailsButton" class="modal_button">Account Details</button></a>
-            <button id="paymentMethodsButton" class="modal_button">Payment Methods</button>
-            <a href="../public_area/homepage.html"><button id="logoutButton" class="modal_button">Log Out</button></a>
-        </div>
-    </div>
+    <div id="navbar-container"></div>
 
     <h2>You are currently on a standard subscription.</h2>
     <h2>If you are a tireless user of our services, you may want to explore our offers for short-term services.</h2>
@@ -43,7 +36,7 @@
     <button id="expandableButton" class="button">Our offers</button>
     <div class="default_vertical_expandable" id="expandable">
         <div class="button_with_image">
-                <img src="../../images/subscriptions/goku_one_service.jpeg" alt="one_service">
+                <img src="../../images/subscriptions/goku_one_service_premium_subscription.jpeg" alt="one_service">
             <button class="button" data-description="one_service_subscription">One-service Premium Subscription</button>
             <div class="description" data-service="one_service_subscription">
                 <p>For a special price, get unlimited access to all of our businesses within one service network.<br>
@@ -63,7 +56,7 @@
             </div>
         </div>
         <div class="button_with_image">
-                <img src="../../images/subscriptions/goku_all_in_one.jpeg" alt="all_in_one">
+                <img src="../../images/subscriptions/goku_all_in_one_premium_subscription.jpeg" alt="all_in_one">
                 <button class="button" data-description="all_in_one_subscription">All-in-one Premium Subscription</button>
                 <div class="description" data-service="all_in_one_subscription">
                     <p>TravelBuddy Ultra Instinct!<br>
@@ -90,13 +83,14 @@
                 <input type="checkbox" name="choice" value="all_in_one">All-in-one Premium
             </label>
         </div>
-        <a href="tdb.html"><button class="button" id="goToPayment">Go To Payment</button></a>
+        <a href="payment.html"><button class="button" id="goToPayment">Go To Payment</button></a>
     </div>
 
-
 </section>
-<script src="../../js/user_section/show_dropdown_menu.js" ></script>
-<script src="../../js/public_section/show_service_description.js" ></script>
-<script src="../../js/user_section/expand_button.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../../js/user_area/load_sticky_navbar.js"></script>
+<script src="../../js/public_area/show_description.js" ></script>
+<script src="../../js/user_area/expand_button.js"></script>
+<script src="../../js/user_area/check_option-selected.js"></script>
 </body>
 </html>
