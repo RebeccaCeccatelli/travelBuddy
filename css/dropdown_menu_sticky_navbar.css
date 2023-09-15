@@ -1,0 +1,40 @@
+.sticky_navbar .button {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ellipsis {
+    font-size: 22px;
+    margin-left: 5px;
+    margin-top: -10px;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    background-color: rgba(143, 76, 8, 0.2);
+    padding: 20px;
+}
+
+.modal_button {
+    display: block;
+    padding: 10px;
+    background-color: rgba(143, 76, 8, 0);
+    color: oldlace;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
+}
+
+.modal_button:hover {
+    background-color: rgba(143, 76, 8, 0.2);
+
+}

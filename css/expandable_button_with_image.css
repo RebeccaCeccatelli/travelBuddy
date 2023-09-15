@@ -1,0 +1,27 @@
+.expandable {
+    border:none;
+    display: none;
+    padding: 10px;
+    background-color: rgba(143, 76, 8, 0);
+    margin-top: 10px;
+}
+
+.button_with_image {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.button_with_image img {
+    max-height: 125px;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.button_with_image .button {
+    padding: 10px 20px;
+    margin-top: 10px;
+}

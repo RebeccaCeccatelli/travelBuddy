@@ -1,4 +1,26 @@
 [
-    { "coordinates": [43.79736763934289, 11.249718592600525], "message": "Residenza Cristina" },
-    { "coordinates": [43.795969591625294, 11.25466594188191], "message": "Net Records Loft - Venue Arena" }
+    { "coordinates": [43.79736763934289, 11.249718592600525],
+        "message":"Business name: Residenza Cristina.<br>Type: Bed & Breakfast.<br>Pay-Per-Use access price: free.<br>Rating (out of 5): 3.5.<br>Opening time: 07:00.<br>Closing time: 23:00."},
+
+    { "coordinates": [43.795969591625294, 11.25466594188191],
+        "message": "Business name: Net Records Loft.<br>Type: Event Venue.<br>Pay-Per-Use access price: 0.50$.<br>Rating (out of 5): 4.0.<br>Opening time: 17:00.<br>Closing time: 01:00." },
+
+    {"coordinates":  [43.790266469465124, 11.25699785436332],
+        "message":  "Business name: Villa Fabbricotti.<br>Type: Park and Garden.<br>Pay-Per-Use access price: 0.30$.<br>Rating (out of 5): 3.0.<br>Opening time: 08:00.<br>Closing time: 21:00."},
+
+    {"coordinates":  [43.793461481500756, 11.254457473734915],
+        "message":  "Business name: Stibbert Museum.<br>Type: Museum.<br>Pay-Per-Use access price: 1.00$.<br>Rating (out of 5): 4.0.<br>Opening time: 09:00.<br>Closing time: 18:00."},
+
+    {"coordinates":  [43.78993015081305, 11.24202134980215],
+        "message": "Business name: Fish Nude Firenze.<br>Type: Sushi restaurant.<br>Pay-Per-Use access price: 0.70$.<br>Rating (out of 5): 4.5.<br>Opening time: 12:00.<br>Closing time: 23:00."},
+
+    {"coordinates":  [43.803188365751, 11.235465550028374],
+        "message":  "Business name: Balena Gialla.<br>Type: Fish restaurant.<br>Pay-Per-Use access price: free.<br>Rating (out of 5): 3.5.<br>Opening time: 12:00.<br>Closing time: 23:30."},
+
+    {"coordinates":  [43.81115443622753, 11.268580487359287],
+        "message":  "Business name: Villa Tantafera.<br>Type: Deluxe apartments for rent.<br>Pay-Per-Use access price: 0.50$.<br>Rating (out of 5): 4.5.<br>Opening time: 11:00.<br>Closing time: 00:00."},
+
+    {"coordinates":  [43.81089525451022, 11.251521394535727],
+        "message":  "Business name: Careggi Hospital.<br>Type: Public hospital.<br>Pay-Per-Use access price: free.<br>Rating (out of 5): 4.0.<br>Opening Time: 07:00.<br>Closing Time: 01:00."}
+
 ]

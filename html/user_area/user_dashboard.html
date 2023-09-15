@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../css/sticky_navbar.css">
-    <link rel="stylesheet" type="text/css" href="../../css/user_dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../../css/dropdown_menu_sticky_navbar.css">
+    <link rel="stylesheet" type="text/css" href="../../css/no_wrap_button.css">
+    <link rel="stylesheet" type="text/css" href="../../css/expandable_button_with_image.css">
+
 </head>
 
 <body>
@@ -15,7 +17,7 @@
         <button id="dropdown_button" class="button">Rebecca Ceccatelli <span class="ellipsis">...</span></button>
         <div id="dropdown_menu" class="modal">
             <a href="account_details.html"><button id="accountDetailsButton" class="modal_button">Account Details</button></a>
-            <a href="tbd.html"><button id="paymentMethodsButton" class="modal_button">Payment Methods</button></a>
+            <button id="paymentMethodsButton" class="modal_button">Payment Methods</button>
             <a href="../public_area/homepage.html"><button id="logoutButton" class="modal_button">Log Out</button></a>
         </div>
     </div>
@@ -24,7 +26,7 @@
     <p>Your TravelBuddy always takes care of you, and is full of resources. <br>
         What do you want to do today?</p>
 
-        <button id="findAndReserveButton" class="button">Find and Reserve</button>
+        <button id="expandableButton" class="button">Find and Reserve</button>
         <div class="expandable" id="expandable">
             <p>What are you looking for?</p>
                 <div class="button_with_image">
@@ -65,7 +67,7 @@
                 </div>
         </div>
 
-    <button id="subscription" class="button">Check or upgrade subscription</button>
+    <a href="subscriptions.html"><button id="subscription" class="button">Our offers for you: <br>Check or upgrade subscription</button></a>
     <button id="Reviews" class="button">Reviews</button>
 
 </section>
