@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Trattoria La Fontana",
+    "email": "trattorialafontana@gmail.com",
+    "password": "wlaciccia4ever",
+    "activated_services": ["Toilets", "Luggage deposit", "Dining options"]
+  },
+  {
+    "id": 2,
+    "name": "Residenza Cristina",
+    "email": "residenzacristina@alice.it",
+    "password": "cristina",
+    "activated_services": ["Toilets", "Wifi hotspots"]
+  }
+]

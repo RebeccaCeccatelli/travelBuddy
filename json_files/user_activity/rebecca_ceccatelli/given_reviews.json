@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2023-09-16",
+    "time": "15:30:00",
+    "business": "Trattoria La Fontana",
+    "service": "Dining options",
+    "text": "Great dining experience with a wide variety of menu options.",
+    "rating": 4.5
+  },
+  {
+    "date": "2023-09-15",
+    "time": "12:45:00",
+    "business": "Residenza Cristina",
+    "service": "Wifi hotspots",
+    "text": "Fast and reliable Wi-Fi service available throughout the property.",
+    "rating": 5.0
+  },
+  {
+    "date": "2023-09-14",
+    "time": "10:15:00",
+    "business": "Trattoria La Fontana",
+    "service": "Toilets",
+    "text": "Clean and well-maintained restroom facilities.",
+    "rating": 4.0
+  }
+]

@@ -10,23 +10,24 @@ var urlParams = new URLSearchParams(window.location.search);
 var type = urlParams.get('type');
 
 var jsonFile;
+var urlPrefix = '../../json_files/business_activity/registered_businesses_per_service/';
 if (type === 'toilets') {
-    jsonFile = '../../json_files/toilets.json';
+    jsonFile = urlPrefix + 'toilets.json';
 }
 else if (type === 'wifi_hotspots') {
-    jsonFile = '../../json_files/wifi_hotspots.json';
+    jsonFile = urlPrefix + 'wifi_hotspots.json';
 }
 else if (type === 'luggage_deposit') {
-    jsonFile = '../../json_files/luggage_deposit.json';
+    jsonFile = urlPrefix + 'luggage_deposit.json';
 }
 else if (type === 'parking_lots') {
-    jsonFile = '../../json_files/parking_lots.json';
+    jsonFile = urlPrefix + 'parking_lots.json';
 }
 else if (type === 'tourist_attractions') {
-    jsonFile = '../../json_files/tourist_attractions.json';
+    jsonFile = urlPrefix + 'tourist_attractions.json';
 }
 else if (type === 'dining_options') {
-    jsonFile = '../../json_files/dining_options.json';
+    jsonFile = urlPrefix + 'dining_options.json';
 }
 
 fetch(jsonFile)

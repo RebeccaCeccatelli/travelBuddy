@@ -21,6 +21,14 @@ form input {
     text-align: center;
 }
 
+form select {
+    padding: 5px;
+    border: none;
+    background-color: rgba(143, 76, 8, 0.5);
+    color: oldlace;
+    text-align: center;
+}
+
 .single_line_form {
     display: flex;
     align-items: center;
