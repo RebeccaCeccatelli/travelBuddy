@@ -12,5 +12,12 @@
     "email": "residenzacristina@alice.it",
     "password": "cristina",
     "activated_services": ["Toilets", "Wifi hotspots"]
+  },
+  {
+    "id": 3,
+    "name": "Careggi Hospital",
+    "email": "ospedalecareggi@gmail.com",
+    "password": "ospedale_careggi",
+    "activated_services": ["Toilets", "Wifi hotspots", "Parking lots", "Dining options"]
   }
 ]
