@@ -1,4 +1,11 @@
 function saveForm(formType) {
+    var fieldValue = document.getElementById(formType).value;
+
+    if (!fieldValue) {
+        alert("This field cannot be empty.");
+        return;
+    }
+
     var valid = true;
     var emailValue = document.getElementById('email').value;
     var passwordValue = document.getElementById('password').value;

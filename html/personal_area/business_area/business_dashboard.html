@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/no_wrap_button.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/expandable_button_with_image.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/forms.css">
+</head>
+
+<body>
+<section class="section" id="user_dashboard">
+    <div id="navbar-container"></div>
+
+    <h1>Hi, Residenza Cristina!</h1>
+    <p>This is your TravelBuddy's business account. What do you want to do today?</p>
+
+    <button id="expandableButton" class="button">Activate or Deactivate service</button>
+    <div class="expandable" id="expandable">
+        <div id="activeServicesList"></div>
+
+        <p>Want to take the most out of TravelBuddy? Expand your horizons! </p>
+        <form>
+            <label for="unavailableService">Activate service:</label>
+            <select id="unavailableService" required>
+                <option value="">Select a service</option>
+            </select>
+        </form>
+
+        <p>If you're feeling a little overloaded, unplug for a while. </p>
+        <form>
+            <label for="availableService">Deactivate service:</label>
+            <select id="availableService" required>
+                <option value="">Select a service</option>
+            </select>
+        </form>
+    </div>
+
+    <button class="button" data-description="update_access_conditions">Update service access conditions</button>
+    <div class="description" data-service="update_access_conditions">
+        <div class="button_with_image">
+                <img src="../../../images/services/toilets.jpg" alt="Toilets Image">
+                <button class="button" data-description="toilets_access_conditions">Toilets</button>
+            <div class="description" data-service="toilets_access_conditions">
+                <p>prova</p>
+            </div>
+        </div>
+        <div class="button_with_image">
+            <img src="../../../images/services/wifi_hotspot.jpeg" alt="Hotspots Image">
+            <button class="button" data-description="wifi_hotspots_access_conditions">WiFi  Hotspots</button>
+            <div class="description" data-service="wifi_hotspots_access_conditions">
+                <p>prova2</p>
+            </div>
+        </div>
+        <div class="button_with_image">
+                <img src="../../../images/services/luggage_storage.jpeg" alt="Luggage deposit Image">
+                <button class="button">Luggage deposit</button>
+        </div>
+        <div class="button_with_image">
+                <img src="../../../images/services/parking_lots.webp" alt="Parking lots Image">
+                <button class="button">Parking lots</button>
+        </div>
+        <div class="button_with_image">
+                <img src="../../../images/services/tourist_attractions.jpeg" alt="Tourist attractions Image">
+                <button class="button">Tourist attractions</button>
+        </div>
+        <div class="button_with_image">
+                <img src="../../../images/services/dining_options.jpeg" alt="Dining options Image">
+                <button class="button">Dining options</button>
+        </div>
+    </div>
+
+    <a href="../common/check_reviews.html"><button class="button" id="check_received_reviews">Check received reviews</button></a>
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../../../js/personal_area/common/sticky_navbar/load_sticky_navbar.js"></script>
+<script src="../../../js/personal_area/common/populate_dropdown_with_services.js"></script>
+<script src="../../../js/personal_area/business_area/activate_deactivate_services.js"></script>
+<script src="../../../js/public_area/show_description.js" ></script>
+<script src="../../../js/personal_area/common/expand_button.js"></script>
+</body>
+</html>
+

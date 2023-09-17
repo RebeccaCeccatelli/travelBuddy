@@ -10,7 +10,7 @@ var urlParams = new URLSearchParams(window.location.search);
 var type = urlParams.get('type');
 
 var jsonFile;
-var urlPrefix = '../../json_files/business_activity/registered_businesses_per_service/';
+var urlPrefix = '../../../json_files/business_activity/registered_businesses_per_service/';
 if (type === 'toilets') {
     jsonFile = urlPrefix + 'toilets.json';
 }
@@ -43,7 +43,7 @@ fetch(jsonFile)
 
 function addUserLocationMarkerWithPopup(map) {
     var customIcon = L.icon({
-        iconUrl: '../../images/icons/red_icon.png',
+        iconUrl: '../../../images/icons/red_icon.png',
         iconSize: [32, 32],
         iconAnchor: [16, 32],
     });
@@ -65,5 +65,5 @@ function addBusinessMarkerWithPopup(map, popupData) {
 }
 
 function reserve() {
-    var modalWindow = window.open('../../html/user_area/reservation.html');
+    var modalWindow = window.open('../../../html/personal_area/user_area/reservation.html');
 }

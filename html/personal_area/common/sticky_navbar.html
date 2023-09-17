@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../../css/sticky_navbar/dropdown_menu_sticky_navbar.css">
+</head>
+<body>
+<div class="sticky_navbar">
+  <button id="dropdown_button" class="button"><span class="ellipsis">...</span></button>
+  <div id="dropdown_menu" class="modal">
+    <button id="accountDetailsButton" class="modal_button">Account Details</button>
+    <a href="../../public_area/homepage.html"><button id="logoutButton" class="modal_button">Log Out</button></a>
+  </div>
+</div>
+
+<script src="../../../js/personal_area/common/sticky_navbar/customise_dropdown_button.js"></script>
+<script>
+  document.getElementById("accountDetailsButton").addEventListener("click", function() {
+    var currentURL = window.location.href;
+
+    if (currentURL.includes("/user_area/")) {
+      window.location.href = "../user_area/account_details.html";
+    } else if (currentURL.includes("B")) {
+      window.location.href = "../business_area/account_details.html";
+    } else {
+      alert("Invalid URL.");
+    }
+  });
+</script>
+</body>
+</html>

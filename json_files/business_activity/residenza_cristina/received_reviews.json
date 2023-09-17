@@ -1,0 +1,74 @@
+[
+    {
+      "date": "2023-09-15",
+      "time": "14:30:00",
+      "business": "Residenza Cristina",
+      "user": "Rebecca Ceccatelli",
+      "service": "Dining options",
+      "text": "Great food and atmosphere!",
+      "rating": 5
+    },
+    {
+      "date": "2023-09-14",
+      "time": "10:15:00",
+      "business": "Trattoria la Fontana",
+      "user": "Federico Gori",
+      "service": "Parking lots",
+      "text": "Convenient parking options.",
+      "rating": 4
+    },
+    {
+      "date": "2023-09-13",
+      "time": "16:45:00",
+      "business": "Residenza Cristina",
+      "user": "Diletta Gianotti",
+      "service": "Tourist attractions",
+      "text": "Lots of interesting places to visit.",
+      "rating": 4
+    },
+    {
+      "date": "2023-09-12",
+      "time": "09:00:00",
+      "business": "Stibbert Museum",
+      "user": "Alan Ceccatelli",
+      "service": "Luggage deposit",
+      "text": "Secure luggage storage available.",
+      "rating": 5
+    },
+  {
+    "date": "2023-09-16",
+    "time": "18:30:00",
+    "business": "Residenza Cristina",
+    "user": "Sophia Rossi",
+    "service": "Dining options",
+    "text": "Fantastic dining experience!",
+    "rating": 5
+  },
+  {
+    "date": "2023-09-15",
+    "time": "12:45:00",
+    "business": "Trattoria la Fontana",
+    "user": "Rebecca Ceccatelli",
+    "service": "Parking lots",
+    "text": "Easy parking access.",
+    "rating": 4
+  },
+  {
+    "date": "2023-09-14",
+    "time": "14:15:00",
+    "business": "Stibbert Museum",
+    "user": "Rebecca Ceccatelli",
+    "service": "Tourist attractions",
+    "text": "Fascinating exhibits!",
+    "rating": 5
+  },
+  {
+    "date": "2023-09-13",
+    "time": "10:30:00",
+    "business": "Residenza Cristina",
+    "user": "Lorenzo Morelli",
+    "service": "Luggage deposit",
+    "text": "Very secure storage facilities.",
+    "rating": 4
+  }
+]

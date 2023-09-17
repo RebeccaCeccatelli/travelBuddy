@@ -1,11 +1,10 @@
 $(document).ready(function () {
     $.ajax({
-        url: 'sticky_navbar.html',
+        url: '../../../html/personal_area/common/sticky_navbar.html',
         dataType: 'html',
         success: function (data) {
             $('#navbar-container').html(data);
 
-            // Dopo aver caricato la navbar, aggiungi l'evento click al pulsante "Rebecca Ceccatelli"
             const dropdownButton = document.getElementById("dropdown_button");
             const dropdownMenu = document.getElementById("dropdown_menu");
 
@@ -19,3 +18,16 @@ $(document).ready(function () {
         }
     });
 });
+
+var url = window.location.href;
+if (url.includes("/check_reviews.html")) {
+    url = document.referrer;
+}
+
+var dropdownButton = document.getElementById("dropdown_button");
+
+if (url.includes("/business_area/")) {
+    dropdownButton.textContent = "Residenza Cristina";
+} else if (url.includes("/user_area/")) {
+    dropdownButton.textContent = "Rebecca Ceccatelli";
+}
