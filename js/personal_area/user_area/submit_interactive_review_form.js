@@ -17,7 +17,7 @@ fetch("../../../json_files/user_activity/rebecca_ceccatelli/visited_businesses.j
         userBusinesses.forEach(business => {
             const option = document.createElement("option");
             option.value = business.id;
-            option.textContent = business.opening_time;
+            option.textContent = business.name;
             businessSelect.appendChild(option);
         });
     })
