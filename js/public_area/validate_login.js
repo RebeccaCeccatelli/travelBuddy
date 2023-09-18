@@ -6,7 +6,7 @@ loginForm.addEventListener("submit", function (event) {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    checkCredentialsAndRedirect(email, password);
+    checkAccountExistenceAndRedirect(email, password);
 
     loginForm.reset();
 });

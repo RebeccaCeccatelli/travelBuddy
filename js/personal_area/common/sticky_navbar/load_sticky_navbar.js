@@ -20,7 +20,7 @@ $(document).ready(function () {
 });
 
 var url = window.location.href;
-if (url.includes("/check_reviews.html")) {
+if (url.includes("check_reviews.html") || url.includes("account_details.html")) {
     url = document.referrer;
 }
 

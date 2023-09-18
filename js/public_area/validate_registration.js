@@ -16,7 +16,7 @@ form.addEventListener('submit', function (e) {
     }
 
     alert("Registration successful!");
-    checkCredentialsAndRedirect(email, password);
+    checkAccountExistenceAndRedirect(email, password);
 });
 
 

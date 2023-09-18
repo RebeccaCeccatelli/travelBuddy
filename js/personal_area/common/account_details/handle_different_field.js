@@ -1,12 +1,12 @@
 const previousPath = document.referrer;
 
-const differentField = document.getElementById("differentField");
+const differentFieldLabel = document.querySelector('label[for="differentField"]');
 
 const isBusinessArea = previousPath.includes("/business_area/");
 const isUserArea = previousPath.includes("/user_area/");
 
 if (isBusinessArea) {
-    differentField.textContent = "Address:";
+    differentFieldLabel.textContent = "Address:";
 } else if (isUserArea) {
-    differentField.textContent = "Surname:";
+    differentFieldLabel.textContent = "Surname:";
 }

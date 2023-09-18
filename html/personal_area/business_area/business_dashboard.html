@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../../css/no_wrap_button.css">
     <link rel="stylesheet" type="text/css" href="../../../css/expandable_button_with_image.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/forms.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/form.css">
 </head>
 
 <body>
@@ -38,39 +38,9 @@
         </form>
     </div>
 
-    <button class="button" data-description="update_access_conditions">Update service access conditions</button>
-    <div class="description" data-service="update_access_conditions">
-        <div class="button_with_image">
-                <img src="../../../images/services/toilets.jpg" alt="Toilets Image">
-                <button class="button" data-description="toilets_access_conditions">Toilets</button>
-            <div class="description" data-service="toilets_access_conditions">
-                <p>prova</p>
-            </div>
-        </div>
-        <div class="button_with_image">
-            <img src="../../../images/services/wifi_hotspot.jpeg" alt="Hotspots Image">
-            <button class="button" data-description="wifi_hotspots_access_conditions">WiFi  Hotspots</button>
-            <div class="description" data-service="wifi_hotspots_access_conditions">
-                <p>prova2</p>
-            </div>
-        </div>
-        <div class="button_with_image">
-                <img src="../../../images/services/luggage_storage.jpeg" alt="Luggage deposit Image">
-                <button class="button">Luggage deposit</button>
-        </div>
-        <div class="button_with_image">
-                <img src="../../../images/services/parking_lots.webp" alt="Parking lots Image">
-                <button class="button">Parking lots</button>
-        </div>
-        <div class="button_with_image">
-                <img src="../../../images/services/tourist_attractions.jpeg" alt="Tourist attractions Image">
-                <button class="button">Tourist attractions</button>
-        </div>
-        <div class="button_with_image">
-                <img src="../../../images/services/dining_options.jpeg" alt="Dining options Image">
-                <button class="button">Dining options</button>
-        </div>
-    </div>
+    <button class="button" data-description="update_access_conditions">Update access conditions to active services</button>
+    <div class="description" data-service="update_access_conditions" id="serviceButtonsContainer"></div>
+
 
     <a href="../common/check_reviews.html"><button class="button" id="check_received_reviews">Check received reviews</button></a>
 
@@ -80,8 +50,66 @@
 <script src="../../../js/personal_area/common/sticky_navbar/load_sticky_navbar.js"></script>
 <script src="../../../js/personal_area/common/populate_dropdown_with_services.js"></script>
 <script src="../../../js/personal_area/business_area/activate_deactivate_services.js"></script>
-<script src="../../../js/public_area/show_description.js" ></script>
+<script src="../../../js/public_area/show_description.js"></script>
 <script src="../../../js/personal_area/common/expand_button.js"></script>
+<script src="../../../js/personal_area/common/populate_dropdown_with_services.js"></script>
+<script>
+    function loadServiceImages(activeServices) {
+        var serviceButtonsContainer = document.getElementById("serviceButtonsContainer");
+
+        activeServices.forEach(function (serviceName) {
+            var serviceId = serviceName.toLowerCase().replace(/\s+/g, "_");
+
+            var serviceButtonDiv = document.createElement("div");
+            serviceButtonDiv.classList.add("button_with_image");
+            var serviceButtonLink = document.createElement("a");
+            serviceButtonLink.href = "update_service_access_conditions.html?type=" + serviceId;
+            serviceButtonLink.target = "_blank";
+
+            var imageFormats = ["jpg", "jpeg", "webp"];
+            var foundImage = false;
+
+            imageFormats.forEach(function (imageFormat) {
+                var imageUrl = `../../../images/services/${serviceId}.${imageFormat}`;
+                var img = new Image();
+
+                img.onerror = function () {
+                    if (!foundImage) {
+                        img.src = "";
+                    }
+                };
+
+                img.onload = function () {
+                    if (!foundImage) {
+                        var serviceButtonImage = document.createElement("img");
+                        serviceButtonImage.src = imageUrl;
+                        serviceButtonImage.alt = serviceName + " Image";
+
+                        var serviceButtonText = document.createElement("button");
+                        serviceButtonText.classList.add("button");
+                        serviceButtonText.textContent = serviceName;
+
+                        serviceButtonLink.appendChild(serviceButtonImage);
+                        serviceButtonLink.appendChild(serviceButtonText);
+                        serviceButtonDiv.appendChild(serviceButtonLink);
+                        serviceButtonsContainer.appendChild(serviceButtonDiv);
+                        foundImage = true;
+                    }
+                };
+
+                img.src = imageUrl;
+            });
+        });
+    }
+
+    var businessId = 2;
+    getActiveServices(businessId)
+        .then((activeServices) => {
+            loadServiceImages(activeServices);
+        })
+        .catch((error) => {
+            console.error("Error loading active services: ", error);
+        });
+</script>
 </body>
 </html>
-

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account details</title>
     <link rel="stylesheet" type="text/css" href="../../../css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/forms.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/form.css">
     <link rel="stylesheet" type="text/css" href="../../../css/sticky_navbar/dropdown_menu_sticky_navbar.css">
     <link rel="stylesheet" type="text/css" href="../../../css/no_wrap_button.css">
 
@@ -24,11 +24,11 @@
             <button type="button" class="button" onclick="saveForm('name')">Save</button>
         </div>
     </form>
-    <form class="single_line_form" id="surname_form">
+    <form class="single_line_form" id="differentFieldForm">
         <div class="single_line_form">
-            <label for="surname">Surname:</label>
-            <input type="text" id="surname" name="surname" required>
-            <button type="button" class="button" onclick="saveForm('surname')">Save</button>
+            <label for="differentField"></label>
+            <input type="text" id="differentField" name="differentField" required>
+            <button type="button" class="button" onclick="saveForm('differentField')">Save</button>
         </div>
     </form>
     <form class="single_line_form" id="email_form">
@@ -51,7 +51,11 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../../../js/personal_area/common/sticky_navbar/load_sticky_navbar.js"></script>
 <script src="../../../js/personal_area/common/account_details/update_account_details.js"></script>
-<script src="../../../js/public_area/check_credentials_and_redirect.js"></script>
+<script src="../../../js/public_area/check_account_existence_and_redirect.js"></script>
 <script src="../../../js/personal_area/common/account_details/handle_different_field.js"></script>
+<script src="../../../js/public_area/check_email_validity.js"></script>
+<script src="../../../js/public_area/check_password_validity.js"></script>
+
 </body>
+
 </html>

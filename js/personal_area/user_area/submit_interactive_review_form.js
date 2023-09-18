@@ -17,7 +17,7 @@ fetch("../../../json_files/user_activity/rebecca_ceccatelli/visited_businesses.j
         userBusinesses.forEach(business => {
             const option = document.createElement("option");
             option.value = business.id;
-            option.textContent = business.name;
+            option.textContent = business.opening_time;
             businessSelect.appendChild(option);
         });
     })
@@ -30,7 +30,7 @@ function validateRating() {
     const ratingValue = parseFloat(ratingInput.value);
 
     if (isNaN(ratingValue) || ratingValue < 0 || ratingValue > 5 || (ratingValue * 10) % 5 !== 0) {
-        ratingInput.value = ""; // Reset the input value
+        ratingInput.value = "";
         return false;
     }
 
