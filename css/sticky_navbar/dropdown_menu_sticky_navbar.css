@@ -39,6 +39,12 @@
 
 }
 
+#backNavbar {
+    position: fixed;
+    top: 0;
+    left: 10px;
+}
+
 /* Regole CSS per dispositivi mobili */
 @media (max-width: 768px) {
     .sticky_navbar {
@@ -53,4 +59,12 @@
     .modal {
         background-color: rgba(255, 102, 0,0.2);
     }
+
+    #backNavbar #back {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 70px;
+    }
+
 }

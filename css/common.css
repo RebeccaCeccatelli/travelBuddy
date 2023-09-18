@@ -70,6 +70,13 @@ a {
     padding: 15px 30px;
 }
 
+#back.button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+}
+
 /* Stili per dispositivi mobili (media query) */
 
 @media (max-width: 768px) {
