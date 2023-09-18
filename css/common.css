@@ -88,9 +88,15 @@ a {
     .button {
         font-size: 18px;
         padding: 8px 16px;
+        background-color: rgba(255, 102, 0,0.2);
+    }
+
+    body {
+        background-image: url('../images/mobile_background.jpeg');
     }
 
     .section {
         padding: 20px;
+        background-color: rgba(0,0,0,0);
     }
 }

@@ -71,5 +71,24 @@
 <script src="../../../js/personal_area/common/sticky_navbar/load_sticky_navbar.js"></script>
 <script src="../../../js/personal_area/common/expand_button.js" ></script>
 <script src="../../../js/public_area/show_description.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var reviewsButton = document.querySelector('[data-description="reviews"]');
+
+        reviewsButton.addEventListener("click", function () {
+            var addReviewButton = document.getElementById("add_review_button");
+
+            var navbar = document.querySelector(".sticky_navbar");
+            var navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+            var addReviewButtonPosition = addReviewButton.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+            window.scrollTo({
+                top: addReviewButtonPosition,
+                behavior: "smooth"
+            });
+        });
+    });
+</script>
 </body>
 </html>

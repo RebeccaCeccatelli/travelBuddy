@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Our offers for you</title>
    <link rel="stylesheet" type="text/css" href="../../../css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/sticky_navbar/dropdown_menu_sticky_navbar.css">
     <link rel="stylesheet" type="text/css" href="../../../css/single_line_button.css">
     <link rel="stylesheet" type="text/css" href="../../../css/expandable_button_with_image.css">
 
@@ -92,5 +92,24 @@
 <script src="../../../js/public_area/show_description.js" ></script>
 <script src="../../../js/personal_area/common/expand_button.js"></script>
 <script src="../../../js/personal_area/user_area/check_option_selected_before_payment.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var upgradeButton = document.querySelector('[data-description="upgrade"]');
+
+        upgradeButton.addEventListener("click", function () {
+            var goToPaymentButton = document.getElementById("goToPayment");
+
+            var navbar = document.querySelector(".sticky_navbar");
+            var navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+            var goToPaymentButtonPosition = goToPaymentButton.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+            window.scrollTo({
+                top: goToPaymentButtonPosition,
+                behavior: "smooth"
+            });
+        });
+    });
+</script>
 </body>
 </html>
