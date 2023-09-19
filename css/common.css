@@ -64,8 +64,9 @@ a {
 
 .section .button {
     display: block;
-    width: 200px;
-    margin: 0 auto;
+    width: auto;
+    margin: 40px auto;
+    white-space: nowrap;
     margin-bottom: 10px;
     text-align: center;
     padding: 15px 30px;
