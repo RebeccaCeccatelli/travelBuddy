@@ -1,5 +1,5 @@
-const businessSelect = document.getElementById("businessSelect");
-const availableService = document.getElementById("availableService");
+const businessSelect = document.getElementById("business-select");
+const availableService = document.getElementById("available-service");
 
 
 businessSelect.addEventListener("change", function () {

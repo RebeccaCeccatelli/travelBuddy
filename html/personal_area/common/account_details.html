@@ -8,54 +8,51 @@
     <link rel="stylesheet" type="text/css" href="../../../css/form.css">
     <link rel="stylesheet" type="text/css" href="../../../css/sticky_navbar/dropdown_menu_sticky_navbar.css">
     <link rel="stylesheet" type="text/css" href="../../../css/single_line_button.css">
-
-
 </head>
+
 <body>
 <section class="section" id="details">
     <div id="navbar-container"></div>
 
     <h2>Update your account details here:</h2>
 
-    <form class="single_line_form" id="name_form">
-        <div class="single_line_form">
+    <form class="single-line-form" id="name-form">
+        <div class="single-line-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <button type="button" class="button" onclick="saveForm('name')">Save</button>
         </div>
     </form>
-    <form class="single_line_form" id="differentFieldForm">
-        <div class="single_line_form">
-            <label for="differentField"></label>
-            <input type="text" id="differentField" name="differentField" required>
-            <button type="button" class="button" onclick="saveForm('differentField')">Save</button>
+    <form class="single-line-form" id="different-field-form">
+        <div class="single-line-form">
+            <label for="different-field"></label>
+            <input type="text" id="different-field" name="different-field" required>
+            <button type="button" class="button" onclick="saveForm('different-field')">Save</button>
         </div>
     </form>
-    <form class="single_line_form" id="email_form">
-        <div class="single_line_form">
+    <form class="single-line-form" id="email-form">
+        <div class="single-line-form">
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" required>
             <button type="button" class="button" onclick="saveForm('email')">Save</button>
         </div>
     </form>
-    <form class="single_line_form" id="password_form">
-        <div class="single_line_form">
+    <form class="single-line-form" id="password-form">
+        <div class="single-line-form">
             <label for="password">New password:</label>
             <input type="password" id="password" name="password" required>
-            <label for="password_confirmation">Reinsert password:</label>
-            <input type="password" id="password_confirmation" name="password_confirmation" required>
+            <label for="password-confirmation">Reinsert password:</label>
+            <input type="password" id="password-confirmation" name="password-confirmation" required>
             <button type="button" class="button" onclick="saveForm('password')">Save</button>
         </div>
     </form>
 </section>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../../../js/personal_area/common/sticky_navbar/load_sticky_navbar.js"></script>
 <script src="../../../js/personal_area/common/account_details/update_account_details.js"></script>
-<script src="../../../js/public_area/check_account_existence_and_redirect.js"></script>
 <script src="../../../js/personal_area/common/account_details/handle_different_field.js"></script>
 <script src="../../../js/public_area/check_email_validity.js"></script>
 <script src="../../../js/public_area/check_password_validity.js"></script>
-
 </body>
-
 </html>

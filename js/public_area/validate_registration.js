@@ -5,7 +5,7 @@ form.addEventListener('submit', function (e) {
 
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
-    const confirmPassword = document.querySelector('#password_confirmation').value;
+    const confirmPassword = document.querySelector('#password-confirmation').value;
 
     if (!checkValidEmail(email)) {
         return;

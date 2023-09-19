@@ -5,8 +5,8 @@ $(document).ready(function () {
         success: function (data) {
             $('#navbar-container').html(data);
 
-            const dropdownButton = document.getElementById("dropdown_button");
-            const dropdownMenu = document.getElementById("dropdown_menu");
+            const dropdownButton = document.getElementById("dropdown-button");
+            const dropdownMenu = document.getElementById("dropdown-menu");
 
             dropdownButton.addEventListener("click", function () {
                 if (dropdownMenu.style.display === "block") {
@@ -24,10 +24,10 @@ if (url.includes("check_reviews.html") || url.includes("account_details.html")) 
     url = document.referrer;
 }
 
-var dropdownButton = document.getElementById("dropdown_button");
+var dropdownButton = document.getElementById("dropdown-button");
 
-if (url.includes("/business_area/")) {
+if (url.includes("business_area")) {
     dropdownButton.textContent = "Residenza Cristina";
-} else if (url.includes("/user_area/")) {
+} else if (url.includes("user_area")) {
     dropdownButton.textContent = "Rebecca Ceccatelli";
 }

@@ -1,5 +1,5 @@
 const password = document.querySelector('#password');
-const confirmPassword = document.querySelector('#password_confirmation');
+const confirmPassword = document.querySelector('#password-confirmation');
 
 function checkPasswordMatch(firstPassword, secondPassword) {
     if (firstPassword !== secondPassword) {

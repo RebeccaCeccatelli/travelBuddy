@@ -10,7 +10,7 @@ var urlParams = new URLSearchParams(window.location.search);
 var type = urlParams.get('type');
 
 var jsonFile;
-var urlPrefix = '../../../json_files/business_activity/registered_businesses_per_service/';
+var urlPrefix = '../../../json_files/registered_businesses_per_service/';
 if (type === 'toilets') {
     jsonFile = urlPrefix + 'toilets.json';
 }
@@ -57,13 +57,13 @@ function addBusinessMarkerWithPopup(map, popupData) {
     popupData.forEach(function(data) {
         var marker = L.marker(data.coordinates).addTo(map);
 
-        var popupContent = '<div class="popup_message">' + data.message + '</div>' +
-            '<div class="popup_button"><button onclick="reserve()">Reserve</button></div>';
+        var popupContent = '<div class="popup-message">' + data.message + '</div>' +
+            '<div class="popup-button"><button onclick="reserve()">Reserve</button></div>';
 
         marker.bindPopup(popupContent);
     });
 }
 
 function reserve() {
-    var modalWindow = window.open('../../../html/personal_area/user_area/reservation.html');
+    window.open('../../../html/personal_area/user_area/reservation.html');
 }

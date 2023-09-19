@@ -4,26 +4,21 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../../../css/sticky_navbar/dropdown_menu_sticky_navbar.css">
 </head>
-<body>
-<div class="sticky_navbar" id="backNavbar">
-  <button id="back" class="button">Back</button>
 
+<body>
+<div class="sticky-navbar" id="back-navbar">
+  <button id="back-button" class="button">Back</button>
 </div>
-<div class="sticky_navbar">
-  <button id="dropdown_button" class="button"><span class="ellipsis">...</span></button>
-  <div id="dropdown_menu" class="modal">
-    <a href="../common/account_details.html"><button id="accountDetailsButton" class="modal_button">Account Details</button></a>
-    <button id="logoutButton" class="modal_button" onclick="logout()">Log Out</button>
+<div class="sticky-navbar">
+  <button id="dropdown-button" class="button"><span class="ellipsis">...</span></button>
+  <div id="dropdown-menu" class="modal">
+    <a href="../common/account_details.html"><button id="account-details-button" class="modal-button">Account Details</button></a>
+    <button id="logout-button" class="modal-button" onclick="logout()">Log Out</button>
   </div>
 </div>
 
 <script src="../../../js/personal_area/common/sticky_navbar/customise_dropdown_button.js"></script>
 <script src="../../../js/public_area/back_button.js"></script>
-<script>
-  function logout() {
-    window.open("../../public_area/homepage.html")
-  }
-</script>
-
+<script src="../../../js/personal_area/common/sticky_navbar/logout.js"></script>
 </body>
 </html>

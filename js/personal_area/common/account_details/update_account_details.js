@@ -9,7 +9,7 @@ function saveForm(formType) {
     var valid = true;
     var emailValue = document.getElementById('email').value;
     var passwordValue = document.getElementById('password').value;
-    var confirmPasswordValue = document.getElementById('password_confirmation').value;
+    var confirmPasswordValue = document.getElementById('password-confirmation').value;
 
     if (formType === 'email') {
         valid = checkValidEmail(emailValue);
@@ -28,6 +28,6 @@ function saveForm(formType) {
 function clearFields(formType) {
     document.getElementById(formType).value = '';
     if (formType === 'password') {
-        document.getElementById('password_confirmation').value = '';
+        document.getElementById('password-confirmation').value = '';
     }
 }

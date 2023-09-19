@@ -10,11 +10,13 @@
 </head>
 
 <body>
-<section  class="section" id="business_registration">
+<section  class="section" id="business-registration">
+    <button id="back-button" class="button">Back</button>
+
     <form>
         <h1>Business Registration</h1>
-        <label for="business_name">Business name:</label>
-        <input type="text" id="business_name" name="business_name" required>
+        <label for="business-name">Business name:</label>
+        <input type="text" id="business-name" name="business-name" required>
 
         <label for="address">Address (street, civic number, post code (city, country)):</label>
         <input type="text" id="address" name="address" required>
@@ -25,8 +27,8 @@
         <label for="password">Choose your password:</label>
         <input type="password" id="password" name="password" required>
 
-        <label for="password_confirmation">Confirm your Password:</label>
-        <input type="password" id="password_confirmation" name="password_confirmation" required>
+        <label for="password-confirmation">Confirm your Password:</label>
+        <input type="password" id="password-confirmation" name="password-confirmation" required>
 
         <button type="submit" class="button">Register</button>
     </form>
@@ -35,5 +37,7 @@
 <script src="../../js/public_area/check_account_existence_and_redirect.js"></script>
 <script src="../../js/public_area/check_email_validity.js"></script>
 <script src="../../js/public_area/check_password_validity.js"></script>
+<script src="../../js/public_area/back_button.js"></script>
+
 </body>
 </html>

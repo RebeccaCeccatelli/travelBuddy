@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const previousPath = document.referrer;
 
-    const pageHeader = document.getElementById("pageHeader");
+    const pageHeader = document.getElementById("page-header");
 
-    const isBusinessArea = previousPath.includes("/business_area/");
-    const isUserArea = previousPath.includes("/user_area/");
+    const isBusinessArea = previousPath.includes("business_area");
+    const isUserArea = previousPath.includes("user_area");
 
-    fetch("../../../json_files/business_activity/residenza_cristina/received_reviews.json")
+    fetch("../../../json_files/reviews.json")
         .then(response => response.json())
         .then(reviews => {
             const filteredReviews = reviews.filter(review => {

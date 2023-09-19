@@ -1,8 +1,8 @@
-.popup_message {
+.popup-message {
     margin-bottom: 10px;
 }
 
-.popup_button button {
+.popup-button button {
     background-color: dodgerblue;
     color: white;
     border: none;

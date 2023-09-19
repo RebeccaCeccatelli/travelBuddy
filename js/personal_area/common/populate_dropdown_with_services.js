@@ -7,6 +7,7 @@ function populateDropdownWithActiveServices(businessId) {
                     const selectedBusiness = userBusinesses.find((business) => business.id === businessId);
 
                     if (selectedBusiness) {
+                        const availableService = document.getElementById("available-service");
                         availableService.innerHTML = '<option value="">Select a service</option>';
 
                         activatedServices.forEach((service) => {
@@ -33,7 +34,7 @@ function populateDropdownWithInactiveServices(businessId) {
             const selectedBusiness = userBusinesses.find((business) => business.id === businessId);
 
             if (selectedBusiness) {
-                const unavailableService = document.getElementById("unavailableService");
+                const unavailableService = document.getElementById("unavailable-service");
                 unavailableService.innerHTML = '<option value="">Select a service</option>';
 
                 const activatedServices = selectedBusiness.activated_services;

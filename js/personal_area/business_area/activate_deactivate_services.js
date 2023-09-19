@@ -5,7 +5,7 @@ populateDropdownWithActiveServices(2);
 function populateActiveServicesList(businessId) {
     getActiveServices(businessId)
         .then((activatedServices) => {
-            const activeServicesList = document.getElementById("activeServicesList");
+            const activeServicesList = document.getElementById("active-services-list");
             activeServicesList.innerHTML = '';
 
             if (activatedServices.length > 0) {

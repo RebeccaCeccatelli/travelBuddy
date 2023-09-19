@@ -20,6 +20,6 @@ function clearFields(formType) {
     document.getElementById(formType).querySelector('input').value = '';
 }
 
-document.getElementById("finishButton").addEventListener("click", function() {
+document.getElementById("finish-button").addEventListener("click", function() {
     window.close();
 });

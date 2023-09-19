@@ -7,18 +7,6 @@
    <link rel="stylesheet" type="text/css" href="../../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../../css/single_line_button.css">
     <link rel="stylesheet" type="text/css" href="../../../css/expandable_button_with_image.css">
-
-    <style>
-        .default_vertical_expandable {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .button_with_image {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
 </head>
 
 <body>
@@ -28,37 +16,37 @@
     <h2>You are currently on a standard subscription.</h2>
     <h2>Are you a tireless user of our services? You may want to explore our offers for short-term services.</h2>
 
-    <button class="button" data-description="short_term_services">What are short-term services?</button>
-    <div class="description" data-service="short_term_services">
+    <button class="button" data-description="short-term-services">What are short-term services?</button>
+    <div class="description" data-service="short-term-services">
         <p>We consider of short duration those services whose use does not exceed the day.<br>
             Toilets, WiFi hotspots and Luggage Deposit are all identified as short-term services.<p></p></div>
 
-    <button id="expandableButton" class="button">Our offers</button>
-    <div class="default_vertical_expandable" id="expandable">
-        <div class="button_with_image">
-                <img src="../../../images/subscriptions/goku_one_service_premium_subscription.jpeg" alt="one_service">
-            <button class="button" data-description="one_service_subscription">One-service Premium Subscription</button>
-            <div class="description" data-service="one_service_subscription">
+    <button id="expandable-button" class="button">Our offers</button>
+    <div class="vertical-expandable" id="expandable">
+        <div class="button-with-image">
+                <img src="../../../images/subscriptions/goku_one_service_premium_subscription.jpeg" alt="One Service Image">
+            <button class="button" data-description="one-service-subscription">One-service Premium Subscription</button>
+            <div class="description" data-service="one-service-subscription">
                 <p>For a special price, get unlimited access to all of our businesses within one service network.<br>
                     Click and find out the fee for each short-term service.</p>
-                <button class="button" data-description="toilets_service">Toilets Premium</button>
-                <div class="description" data-service="toilets_service">
+                <button class="button" data-description="toilets-service">Toilets Premium</button>
+                <div class="description" data-service="toilets-service">
                     <p> Monthly fee: 5$; Annual fee: 50$.</p>
                 </div>
-                <button class="button" data-description="wifi_hotspots_service">Wifi Hotspots Premium</button>
-                <div class="description" data-service="wifi_hotspots_service">
+                <button class="button" data-description="wifi-hotspots-service">Wifi Hotspots Premium</button>
+                <div class="description" data-service="wifi_hotspots-service">
                     <p> Monthly fee: 10$; Annual fee: 80$.</p>
                 </div>
-                <button class="button" data-description="luggage_deposit_service">Luggage Deposit Premium</button>
-                <div class="description" data-service="luggage_deposit_service">
+                <button class="button" data-description="luggage-deposit-service">Luggage Deposit Premium</button>
+                <div class="description" data-service="luggage_deposit-service">
                     <p> Monthly fee: 5$; Annual fee: 50$.</p>
                 </div>
             </div>
         </div>
-        <div class="button_with_image">
-                <img src="../../../images/subscriptions/goku_all_in_one_premium_subscription.jpeg" alt="all_in_one">
-                <button class="button" data-description="all_in_one_subscription">All-in-one Premium Subscription</button>
-                <div class="description" data-service="all_in_one_subscription">
+        <div class="button-with-image">
+                <img src="../../../images/subscriptions/goku_all_in_one_premium_subscription.jpeg" alt="All-in-one Image">
+                <button class="button" data-description="all-in-one-subscription">All-in-one Premium Subscription</button>
+                <div class="description" data-service="all-in-one-subscription">
                     <p>TravelBuddy Super Saiyan!<br>
                     For a discounted price, get unlimited access to all of our short-term services.<br>
                     Monthly fee: 17$; Annual fee: 160$.
@@ -74,42 +62,24 @@
                 <input type="checkbox" name="choice" value="toilets">Toilets Premium
             </label>
             <label>
-                <input type="checkbox" name="choice" value="wifi_hotspots">Wifi Hotspots Premium
+                <input type="checkbox" name="choice" value="wifi-hotspots">Wifi Hotspots Premium
             </label>
             <label>
-                <input type="checkbox" name="choice" value="luggage_deposit">Luggage Deposit Premium
+                <input type="checkbox" name="choice" value="luggage-deposit">Luggage Deposit Premium
             </label>
             <label>
-                <input type="checkbox" name="choice" value="all_in_one">All-in-one Premium
+                <input type="checkbox" name="choice" value="all-in-one">All-in-one Premium
             </label>
         </div>
-        <a href="payment.html"><button class="button" id="goToPayment">Go To Payment</button></a>
+        <a href="payment.html"><button class="button" id="go-to-payment">Go To Payment</button></a>
     </div>
-
 </section>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../../../js/personal_area/common/sticky_navbar/load_sticky_navbar.js"></script>
 <script src="../../../js/public_area/show_description.js" ></script>
 <script src="../../../js/personal_area/common/expand_button.js"></script>
 <script src="../../../js/personal_area/user_area/check_option_selected_before_payment.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var upgradeButton = document.querySelector('[data-description="upgrade"]');
-
-        upgradeButton.addEventListener("click", function () {
-            var goToPaymentButton = document.getElementById("goToPayment");
-
-            var navbar = document.querySelector(".sticky_navbar");
-            var navbarHeight = navbar ? navbar.offsetHeight : 0;
-
-            var goToPaymentButtonPosition = goToPaymentButton.getBoundingClientRect().top + window.scrollY - navbarHeight;
-
-            window.scrollTo({
-                top: goToPaymentButtonPosition,
-                behavior: "smooth"
-            });
-        });
-    });
-</script>
+<script src="../../../js/personal_area/user_area/scroll_to_payment_offers_and_subscriptions.js"></script>
 </body>
 </html>

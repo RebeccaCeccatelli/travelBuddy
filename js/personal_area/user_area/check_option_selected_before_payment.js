@@ -1,4 +1,4 @@
-document.getElementById("goToPayment").addEventListener("click", function (event) {
+document.getElementById("go-to-payment").addEventListener("click", function (event) {
     const checkboxes = document.querySelectorAll('input[name="choice"]:checked');
 
     if (checkboxes.length === 0) {

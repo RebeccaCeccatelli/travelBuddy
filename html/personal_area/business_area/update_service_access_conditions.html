@@ -6,87 +6,49 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../../css/form.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/sticky_navbar/dropdown_menu_sticky_navbar.css">
     <link rel="stylesheet" type="text/css" href="../../../css/single_line_button.css">
 </head>
+
 <body>
 <section class="section" id="service_access_conditions">
     <div id="navbar-container"></div>
 
-    <h2 id="pageTitle">Update your service access conditions here:</h2>
+    <h2 id="page-title">Update your service access conditions here:</h2>
 
-    <form class="single_line_form" id="opening_time_form">
-        <div class="single_line_form">
-            <label for="opening_time">Opening time:</label>
-            <input type="text" id="opening_time" name="opening_time" required>
-            <button type="button" class="button" onclick="saveForm('opening_time_form')">Save</button>
+    <form class="single-line-form" id="opening-time-form">
+        <div class="single-line-form">
+            <label for="opening-time">Opening time:</label>
+            <input type="text" id="opening-time" name="opening-time" required>
+            <button type="button" class="button" onclick="saveForm('opening-time-form')">Save</button>
         </div>
     </form>
-    <form class="single_line_form" id="closing_time_form">
-        <div class="single_line_form">
-            <label for="closing_time">Closing Time:</label>
-            <input type="text" id="closing_time" name="closing_time" required>
-            <button type="button" class="button" onclick="saveForm('closing_time_form')">Save</button>
+    <form class="single-line-form" id="closing-time-form">
+        <div class="single-line-form">
+            <label for="closing-time">Closing Time:</label>
+            <input type="text" id="closing-time" name="closing-time" required>
+            <button type="button" class="button" onclick="saveForm('closing-time-form')">Save</button>
         </div>
     </form>
-    <form class="single_line_form" id="price_form">
-        <div class="single_line_form">
+    <form class="single-line-form" id="price-form">
+        <div class="single-line-form">
             <label for="price">Price:</label>
             <input type="text" id="price" name="price" required>
-            <button type="button" class="button" onclick="saveForm('price_form')">Save</button>
+            <button type="button" class="button" onclick="saveForm('price-form')">Save</button>
         </div>
     </form>
-    <form class="single_line_form" id="additional_notes_form">
-        <div class="single_line_form">
-            <label for="additional_notes">Additional notes:</label>
-            <input type="text" id="additional_notes" name="additional_notes" required>
-            <button type="button" class="button" onclick="saveForm('additional_notes_form')">Save</button>
+    <form class="single-line-form" id="additional-notes-form">
+        <div class="single-line-form">
+            <label for="additional-notes">Additional notes:</label>
+            <input type="text" id="additional-notes" name="additional-notes" required>
+            <button type="button" class="button" onclick="saveForm('additional-notes-form')">Save</button>
         </div>
     </form>
-    <button class="button" id="finishButton">Finish</button>
-
+    <button class="button" id="finish-button">Finish</button>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../../../js/personal_area/common/sticky_navbar/load_sticky_navbar.js"></script>
-<script src="../../../js/public_area/check_account_existence_and_redirect.js"></script>
-<script src="../../../js/personal_area/business_area/update_service_conditions.js"></script>
-<script>
-    // Funzione per ottenere il parametro del tipo di servizio dall'URL
-    function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
-
-    var serviceType = getParameterByName('type');
-
-    var pageTitle = document.getElementById('pageTitle');
-    var commonText = "Update Access Conditions to your ";
-    if (serviceType === 'toilets') {
-        document.title = "Toilets Access Conditions";
-        pageTitle.textContent = commonText + "Toilets " + "here:";
-    } else if (serviceType === 'wifi_hotspots') {
-        document.title = "WiFi Hotspots Access Conditions";
-        pageTitle.textContent = commonText + "WiFi hotspots " + "here:";
-    } else if (serviceType === 'luggage_deposit') {
-        document.title = "Luggage Deposit Access Conditions";
-        pageTitle.textContent = commonText + "luggage deposit " + "here:";
-    } else if (serviceType === 'parking_lots') {
-        document.title = "Parking Lots Access Conditions";
-        pageTitle.textContent = commonText + "parking lots " + "here:";
-    } else if (serviceType === 'tourist_attractions') {
-        document.title = "Tourist Attractions Access Conditions";
-        pageTitle.textContent = commonText + "tourist attractions " + "here:";
-    } else if (serviceType === 'dining_options') {
-        document.title = "Dining Options Access Conditions";
-        pageTitle.textContent = commonText + "dining options " + "here:";
-    }
-</script>
-
+<script src="../../../js/personal_area/business_area/update_service_access_conditions/check_form_validity.js"></script>
+<script src="../../../js/personal_area/business_area/update_service_access_conditions/customise_title_page_by_service.js"></script>
 </body>
 </html>

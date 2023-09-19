@@ -10,7 +10,7 @@
     "id": 2,
     "name": "Residenza Cristina",
     "email": "residenzacristina@alice.it",
-    "password": "cristina",
+    "password": "criresidence",
     "activated_services": ["Toilets", "Wifi hotspots"]
   },
   {

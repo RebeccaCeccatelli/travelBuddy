@@ -17,99 +17,41 @@
     <h1>Hi, Residenza Cristina!</h1>
     <p>This is your TravelBuddy's business account. What do you want to do today?</p>
 
-    <button id="expandableButton" class="button">Activate or Deactivate service</button>
+    <button id="expandable-button" class="button">Activate or Deactivate service</button>
     <div class="expandable" id="expandable">
-        <div id="activeServicesList"></div>
+        <div id="active-services-list"></div>
 
         <p>Want to take the most out of TravelBuddy? Expand your horizons! </p>
         <form>
-            <label for="unavailableService">Activate service:</label>
-            <select id="unavailableService" required>
+            <label for="unavailable-service">Activate service:</label>
+            <select id="unavailable-service" required>
                 <option value="">Select a service</option>
             </select>
         </form>
 
         <p>If you're feeling a little overloaded, unplug for a while. </p>
         <form>
-            <label for="availableService">Deactivate service:</label>
-            <select id="availableService" required>
+            <label for="available-service">Deactivate service:</label>
+            <select id="available-service" required>
                 <option value="">Select a service</option>
             </select>
         </form>
     </div>
 
-    <button class="button" data-description="update_access_conditions">Update access conditions to active services</button>
-    <div class="description" data-service="update_access_conditions" id="serviceButtonsContainer"></div>
+    <button class="button" data-description="update-access-conditions">
+        Update access conditions to active services</button>
+    <div class="description" data-service="update-access-conditions" id="service-buttons-container"></div>
 
-
-    <a href="../common/check_reviews.html"><button class="button" id="check_received_reviews">Check received reviews</button></a>
-
+    <a href="../common/check_reviews.html">
+        <button class="button" id="check-received-reviews">Check received reviews</button></a>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../../../js/personal_area/common/sticky_navbar/load_sticky_navbar.js"></script>
+<script src="../../../js/personal_area/common/expand_button.js"></script>
+<script src="../../../js/public_area/show_description.js"></script>
 <script src="../../../js/personal_area/common/populate_dropdown_with_services.js"></script>
 <script src="../../../js/personal_area/business_area/activate_deactivate_services.js"></script>
-<script src="../../../js/public_area/show_description.js"></script>
-<script src="../../../js/personal_area/common/expand_button.js"></script>
-<script src="../../../js/personal_area/common/populate_dropdown_with_services.js"></script>
-<script>
-    function loadServiceImages(activeServices) {
-        var serviceButtonsContainer = document.getElementById("serviceButtonsContainer");
-
-        activeServices.forEach(function (serviceName) {
-            var serviceId = serviceName.toLowerCase().replace(/\s+/g, "_");
-
-            var serviceButtonDiv = document.createElement("div");
-            serviceButtonDiv.classList.add("button_with_image");
-            var serviceButtonLink = document.createElement("a");
-            serviceButtonLink.href = "update_service_access_conditions.html?type=" + serviceId;
-            serviceButtonLink.target = "_blank";
-
-            var imageFormats = ["jpg", "jpeg", "webp"];
-            var foundImage = false;
-
-            imageFormats.forEach(function (imageFormat) {
-                var imageUrl = `../../../images/services/${serviceId}.${imageFormat}`;
-                var img = new Image();
-
-                img.onerror = function () {
-                    if (!foundImage) {
-                        img.src = "";
-                    }
-                };
-
-                img.onload = function () {
-                    if (!foundImage) {
-                        var serviceButtonImage = document.createElement("img");
-                        serviceButtonImage.src = imageUrl;
-                        serviceButtonImage.alt = serviceName + " Image";
-
-                        var serviceButtonText = document.createElement("button");
-                        serviceButtonText.classList.add("button");
-                        serviceButtonText.textContent = serviceName;
-
-                        serviceButtonLink.appendChild(serviceButtonImage);
-                        serviceButtonLink.appendChild(serviceButtonText);
-                        serviceButtonDiv.appendChild(serviceButtonLink);
-                        serviceButtonsContainer.appendChild(serviceButtonDiv);
-                        foundImage = true;
-                    }
-                };
-
-                img.src = imageUrl;
-            });
-        });
-    }
-
-    var businessId = 2;
-    getActiveServices(businessId)
-        .then((activeServices) => {
-            loadServiceImages(activeServices);
-        })
-        .catch((error) => {
-            console.error("Error loading active services: ", error);
-        });
-</script>
+<script src="../../../js/personal_area/business_area/show_only_active_services.js"></script>
 </body>
 </html>

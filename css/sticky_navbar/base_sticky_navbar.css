@@ -1,4 +1,4 @@
-.sticky_navbar {
+.sticky-navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,7 +9,7 @@
     z-index: 999;
 }
 
-.sticky_navbar .button {
+.sticky-navbar .button {
     margin-right: 10px;
     text-decoration: none;
 }

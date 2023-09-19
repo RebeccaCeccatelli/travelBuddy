@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/backgrounds/desktop_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -11,7 +11,7 @@ body {
 }
 
 .button {
-    background-color: rgba(143, 76, 8, 0.2);
+    background-color: rgba(255, 102, 0,0.2);
     color: oldlace;
     padding: 10px 20px;
     border: none;
@@ -22,7 +22,7 @@ body {
 }
 
 .button:hover {
-    background-color: rgba(143, 76, 8, 0.4);
+    background-color: rgba(255, 102, 0,0.3);
 }
 
 h1 {
@@ -37,6 +37,7 @@ h2 {
     font-size: 3.5em;
     margin-bottom: 0.5em;;
 }
+
 p {
     opacity: 1;
     font-size: 2.5em;
@@ -58,7 +59,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(143, 76, 8, 0.3);
+    background-color: rgba(143, 76, 8, 0);
 }
 
 .section .button {
@@ -70,14 +71,12 @@ a {
     padding: 15px 30px;
 }
 
-#back.button {
+#back-button.button {
     position: absolute;
     top: 10px;
     left: 10px;
     width: 100px;
 }
-
-/* Stili per dispositivi mobili (media query) */
 
 @media (max-width: 768px) {
     h1 {
@@ -92,18 +91,15 @@ a {
         font-size: 1.8em;
     }
 
-    .button {
-        font-size: 18px;
-        padding: 8px 16px;
-        background-color: rgba(255, 102, 0,0.2);
-    }
-
     body {
-        background-image: url('../images/mobile_background.jpeg');
+        background-image: url('../images/backgrounds/mobile_background.jpeg');
     }
 
     .section {
         padding: 20px;
-        background-color: rgba(0,0,0,0);
+    }
+    .button {
+        font-size: 18px;
+        padding: 8px 16px;
     }
 }

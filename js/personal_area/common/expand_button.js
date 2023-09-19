@@ -1,6 +1,6 @@
-document.getElementById("expandableButton").addEventListener("click", function() {
+document.getElementById("expandable-button").addEventListener("click", function() {
     var expandable = document.getElementById("expandable")
-        || document.getElementById("expandable_display_by_default");
+        || document.getElementById("expandable-display-by-default");
     if (expandable.style.display === "none") {
         expandable.style.display = "block";
     } else {
