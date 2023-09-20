@@ -1,4 +1,4 @@
-# travelBuddy
+# travelBuddy-frontend
 
 For trial purposes, log in credentials:
 
